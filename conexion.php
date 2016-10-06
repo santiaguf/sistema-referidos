@@ -3,9 +3,9 @@
 date_default_timezone_set('America/Bogota');  //se define el uso horario para la aplicación en caso de que difiera de la hora del servidor
 
     $nombre_server[1] = 'localhost'; //Servidor al cual nos vamos a conectar.
-    $nombre_user[2] = 'ejesyste_us3r'; //Nombre del usuario de la base de datos.
-    $password[3] = 'ju4n2015*'; //Contraseña de la base de datos
-    $nombre_db[4] = 'ejesyste_fredymarinasso'; //nombre de la base de datos
+    $nombre_user[2] = 'usuariobd'; //Nombre del usuario de la base de datos.
+    $password[3] = 'clave'; //Contraseña de la base de datos
+    $nombre_db[4] = 'referidos'; //nombre de la base de datos
 
     $conectar = @mysql_connect($nombre_server[1],$nombre_user[2],$password[3]) or exit('Datos de conexion incorrectos.');
     mysql_select_db($nombre_db[4]) or exit('No existe la base de datos.');
