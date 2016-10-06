@@ -1,0 +1,132 @@
+body
+{
+	background: #B0B0B0;
+	color: white;
+	font-family: Helvetica, Arial;
+	font-size: 16px;
+}
+h1
+{
+	text-align: center;
+	text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+#el-primer-parrafo
+{
+	background: white;
+	border-radius: 0.5em;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+	color: black;
+	display: block;
+	margin: 1em auto;
+	padding: 1em;
+	width: 70%;
+}
+
+.alerta {
+background: #fff6bf url(images/alerta.png) center no-repeat;
+background-position: 15px 50%; /* x-pos y-pos */
+text-align: left;
+padding: 5px 20px 5px 45px;
+border-top: 2px solid #ffd324;
+border-bottom: 2px solid #ffd324;
+border-radius: 0.5em;
+box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+color: black;
+display: block;
+margin: 1em auto;
+width: 50%;
+}
+
+.agregar
+{
+	background: white;
+	border-radius: 0.5em;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+	color: black;
+	display: block;
+	margin: 1em auto;
+	padding: 1em;
+	width: 30%;
+	
+}
+
+#titulos2
+{
+	background: white;
+	border-radius: 0.5em;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+	color: black;
+	display: block;
+	margin: 1em auto;
+	padding: 1em;
+	width: 90px;
+	text-align: center;
+}
+
+.titulos2
+{
+	background: white;
+	border-radius: 0.5em;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+	color: black;
+	display: block;
+	/*margin: 1em auto;*/
+	padding: 1em;
+	width: 90px;
+	text-align: center;
+}
+
+ul{
+margin:0 auto;
+width: 972px;
+}
+
+li{
+	margin:0 auto;
+	position:relative;
+	float:left;
+	margin-right: 15px;
+}
+
+.titulotabla
+{
+	background: #3691D1;
+}
+
+.naranja
+{
+	color: orange;
+	font-weight: bold;
+}
+#contenedor
+{
+	background: white;
+	border-radius: 0.5em;
+	margin: 1em auto;
+	padding: 1em 0;
+	vertical-align: top;
+	width: 95%;
+}
+#contenedor article
+{
+	background: #1A9DE0;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0 2%;
+	min-height: 350px;
+	padding: 0.5em;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+	/*le da el efecto de trasición de color azul a gris*/
+	transition: all 1s linear;
+	-webkit-transition: all 1s linear;
+	vertical-align: top;
+	width: 40%;
+}
+#contenedor article:hover
+{
+	background: #AAA;
+	/* el transform hace que el cuadro rote 2 grados*/
+	transform: rotate(2deg); 
+	/*el -webkit es para compatibilidad */
+	-webkit-transform: rotate(2deg);
+}
