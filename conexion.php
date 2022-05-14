@@ -1,19 +1,18 @@
 <?php
 
-date_default_timezone_set('America/Bogota');  //se define el uso horario para la aplicación en caso de que difiera de la hora del servidor
+date_default_timezone_set('America/Bogota');  //se define el uso horario para la aplicaciï¿½n en caso de que difiera de la hora del servidor
 
     $nombre_server[1] = 'localhost'; //Servidor al cual nos vamos a conectar.
-    $nombre_user[2] = 'usuariobd'; //Nombre del usuario de la base de datos.
-    $password[3] = 'clave'; //Contraseña de la base de datos
-    $nombre_db[4] = 'referidos'; //nombre de la base de datos
+    $nombre_user[2] = 'root'; //Nombre del usuario de la base de datos.
+    $password[3] = ''; //Contraseï¿½a de la base de datos
+    $nombre_db[4] = 'referids'; //nombre de la base de datos
 
-    $conectar = @mysql_connect($nombre_server[1],$nombre_user[2],$password[3]) or exit('Datos de conexion incorrectos.');
-    mysql_select_db($nombre_db[4]) or exit('No existe la base de datos.');
+    $conectar = mysqli_connect($nombre_server[1],$nombre_user[2],$password[3]) or exit('Datos de conexion incorrectos.');
     
-/*En este archivo también pondremos unas funciones necesarias para el registro y el login*/    
+/*En este archivo tambiï¿½n pondremos unas funciones necesarias para el registro y el login*/    
 session_start();
 
-/*Función que se encarga de eliminar codigo malicioso de las variables.*/
+/*Funciï¿½n que se encarga de eliminar codigo malicioso de las variables.*/
 function limpiar($var)
 {
 
@@ -23,7 +22,7 @@ function limpiar($var)
     return $var;
 }
 
-/*Función que se encarga de validar el email de registro para que sea correcto.*/
+/*Funciï¿½n que se encarga de validar el email de registro para que sea correcto.*/
 function validar_email($email){
     $mail_correcto = 0; 
     //compruebo unas cosas primeras 
@@ -65,7 +64,7 @@ function user_login()
 function validar_admin(){
   if($_SESSION['perfil'] != "administrador"){
     if ($_SESSION['perfil'] != "team") {
-     exit ("acceso restringido, <a href='http://fredymarinandassociates.com/referidos/index.php'>Volver</a>");
+     exit ("acceso restringido, <a href='http://localhost/referidos/index.php'>Volver</a>");
     }
   }
 }
@@ -87,8 +86,8 @@ echo "<div class='navbar navbar-inverse navbar-fixed-top' role='navigation'>";
   echo "          <li><a href='#'>";
   echo $_SESSION['nick'];
   echo "           </a></li>";
-  echo "          <li><a href='http://fredymarinandassociates.com/referidos/perfil.php'>Perfil</a></li>";
-  echo "          <li><a href='http://fredymarinandassociates.com/referidos/index.php?modo=desconectar'>Salir</a></li>";
+  echo "          <li><a href='http://localhost/referidos/perfil.php'>Perfil</a></li>";
+  echo "          <li><a href='http://localhost/referidos/index.php?modo=desconectar'>Salir</a></li>";
   echo "        </ul>";
   echo "      </div><!--/.navbar-collapse -->";
   echo "      </div>";
